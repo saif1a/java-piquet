@@ -32,17 +32,13 @@ public class terrain {
 		Box plaqutte = new Box(0f,1.0f, 0, ap);
 		positionpiquet();
 		TGObjet.addChild(plaqutte);
-		/********************************************************/
 		for (int i = 0; i < this.l.size(); i++) {
 			Piquet piquet = new Piquet(l.get(i));
 			TGObjet.addChild(piquet.generatepiquet());
 		}
 
 		Roue roue = new Roue(new Vector3f(0.1f, 0, -2f));
-		// Roue roue = new Roue(new Vector3f(0.1f, 0, -2f));
 		TGObjet.addChild(roue.generateroue());
-		// TGObjet.addChild(new Piquet(new Vector3f(-0.0f, 0.0f,
-		// -2.5f)).generatepiquet());
 		return TGObjet;
 	}
 
