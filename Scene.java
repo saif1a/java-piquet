@@ -26,34 +26,18 @@ public class Scene {
 		this.group = new BranchGroup();
 		TransformGroup worldgroup = new TransformGroup();
 		group.addChild(worldgroup);
-		/***********************************************/
 		Appearance ap = new Appearance();
 		Color3f col = new Color3f(0.6f, 0.6f, 0.6f);
 		ColoringAttributes ca = new ColoringAttributes(col, ColoringAttributes.NICEST);
 		Box plaqutte = new Box(0.5f, 0.3f, 0, ap);
 		positionpiquet();
-		/********************************************/
 		for (int i = 0; i < this.l.size(); i++) {
 			Piquet piquet = new Piquet(l.get(i));
 			worldgroup.addChild(piquet.generatepiquet());
 		}
 		Roue roue = new Roue(new Vector3f(0.1f, 0.2f, 0.3f));
 		worldgroup.addChild(roue.generateroue());
-		// group.addChild(piquet.generatepiquet());
-		//
-
 		worldgroup.addChild(plaqutte);
-
-		/*******************************************/
-	//	Transform3D T = new Transform3D();
-		// T.rotX((Math.PI/2));
-	//	worldgroup.setTransform(T);
-		/*******************************************/
-	//	universe.getViewingPlatform().setNominalViewingTransform();
-		//universe.addBranchGraph(group);
-	//	universe.getViewingPlatform();
-	//	System.out.println("end");
-
 	}
 
 	public TransformGroup getTG() {
