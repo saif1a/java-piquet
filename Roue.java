@@ -27,11 +27,9 @@ public class Roue {
 		T.setTranslation(this.position);
 		tg.addChild(s);
 		tg.setTransform(T);
-		/********************************************/
 		Color3f col = new Color3f(0.0f, 0.0f, 1.0f);
 		ColoringAttributes ca = new ColoringAttributes(col, ColoringAttributes.NICEST);
 		ap.setColoringAttributes(ca);
-		/**********************************************************/
 		s.setAppearance(ap);
 		return tg;
 
